@@ -7,7 +7,7 @@
 
 # Site settings
 title: ZhangHeng
-brief-intro: 为了祖国！
+brief-intro:    
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://zhangheng12345.github.io/" # the base hostname & protocol for your site
 
