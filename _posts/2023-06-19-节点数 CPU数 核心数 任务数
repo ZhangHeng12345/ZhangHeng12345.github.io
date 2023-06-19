@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "我的第一篇Blog"
-categories: 
-tags: Blog
-author: ZhangHeng
+title:  "节点数 CPU数 核心数 任务数"
+categories: Linux
+tags: 节点数 CPU数 核心数 任务数
+author: Heng
 mathjax: true
 ---
 
