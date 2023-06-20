@@ -11,6 +11,7 @@ mathjax: true
 {:toc}
 
 因为大部分的机器不能连外网，所以check_inputdata --download的功能一般用不了，需要自己去重新下载这些inputdata。<br>
+
 转自[CESM笔记——porting-新机器移植](https://blog.csdn.net/qq_27984679/article/details/107118480)<br>
 下载[inputdata](https://svn-ccsm-inputdata.cgd.ucar.edu/trunk/inputdata/)<br>
 
