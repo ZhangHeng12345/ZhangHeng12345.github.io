@@ -15,6 +15,6 @@ mathjax: true
 
 
 ## 创建新的算例
-```shell
+```sh
 ./create_newcase --case /work/home/dhszh/cesm/cesm_case/box-sensit/PD-0Du1C-G1850ECO_T62_g37 --res T62_g37 --compset G1850ECO --mach sugon --compiler intel --run-unsupported
 ```
