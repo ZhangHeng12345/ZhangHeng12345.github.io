@@ -1,0 +1,65 @@
+---
+layout: post
+title:  "Fortran 环境搭建"
+categories: 编程 Fortran
+tags: Fortran fpm
+author: Heng
+---
+
+* content
+{:toc}
+
+
+## 1. 下载安装 MSYS2 + gfortran
+[MSYS2(Minimal SYStem 2)](https://www.msys2.org/)是一个集成了大量的GNU工具链、工具和库的开源软件包集合。它提供了一个类似于Linux的shell环境，可以在Windows系统中编译和运行许多Linux应用程序和工具。
+
+利用内置的pacman包管理工具安装MSYS2-GFortran
+```
+pacman -Ss fortran           # 查询名字中含“Fortran”字符的包
+pacman -S  ucrt64/mingw-w64-ucrt-x86_64-gcc-fortran    # 安装ucrt64版本的gfortran
+
+```
+
+添加环境变量,便于在在NSYS2环境之外实验MSYS2-GFortran
+```
+D:\software\MYSY2\ucrt64\bin
+D:\software\MYSY2\usr\bin
+```
+
+在Windows的Powershell环境下测试环境变量是否设置正确
+```
+PS C:\Users\Heng\Desktop\CESM2\Fortran\fortran_test> gfortran --version
+GNU Fortran (Rev6, Built by MSYS2 project) 13.2.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO 
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+```
+
+## 2. 安装 fpm
+[Fortran Package Manager(fpm)](https://github.com/fortran-lang/fpm)是Fortran-Lang组织主导、为Fortran语言专门定制开发的免费、开源的包管理器和构建系统。
+
+gfortran是Fortran编译器，当项目源代码文件增多时，我们需要依靠Make、CMake、XMake、fpm来管理和 构建项目，这会为我们节约很多构建代码的时间和精力。
+
+直接通过MSYS2安装fpm
+```
+pacman -Ss fpm              # 查询名字中含“fpm”字符的包
+pacman -S ucrt64/mingw-w64-ucrt-x86_64-fpm  # 安装fpm软件
+
+```
+
+## 3. 创建fpm项目
+在VScode下的Powersehll终端使用fpm,使用VScode编辑代码
+```
+fpm new hello_world         # 新建fpm项目
+cd hello_world              # 切换到新建hello_world文件夹
+
+code .                      # 使用VS Code打开当前文件夹
+fpm build                   # 编译FPM项目
+fpm run                     # 运行主程序
+```
+![VScode+fpm](/_posts/fpm_VScode.jpg)
+
+
+
+
+
