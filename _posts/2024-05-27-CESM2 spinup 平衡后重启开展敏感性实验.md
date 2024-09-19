@@ -38,11 +38,7 @@ mathjax: true
 ./xmlchange NTASKS=144,NTASKS_OCN=288,ROOTPE_OCN=144
 ```
 
-打开与海洋模式耦合的大气二氧化碳box模块,并设置初值为spinup平衡后的值
-```bash
-./xmlchange OCN_CO2_TYPE=box_atm_co2
-./xmlchange CCSM_CO2_PPMV=354.1272
-```
+
 
 重启设置
 ```bash
