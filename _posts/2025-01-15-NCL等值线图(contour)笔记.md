@@ -34,5 +34,5 @@ res@trYReverse=True               ;倒转Y轴
 ```
 res@tmYLMode              = "Explicit"
 res@tmYLValues            = (/0,1000,2000,3000,4000,5000/)
-res@tmYLLabels            = "" + cnres@tmYLValues
+res@tmYLLabels            = "" + res@tmYLValues
 ```
