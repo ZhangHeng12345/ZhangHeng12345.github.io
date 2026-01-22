@@ -26,13 +26,13 @@ res@cnRasterSmoothingOn = True
 ```
 ## 坐标轴数值
 ```
- cnres@sfXArray=lat_aux_grid
- cnres@sfYArray=moc_z/100
- cnres@gsnYAxisIrregular2Linear=True ;Most vertical axis are irregular. We can display them as a linear axis by setting gsnYAxisIrregular2Linear = True
- cnres@trYReverse=True               ;倒转Y轴
+res@sfXArray=lat_aux_grid
+res@sfYArray=moc_z/100
+res@gsnYAxisIrregular2Linear=True ;Most vertical axis are irregular. We can display them as a linear axis by setting gsnYAxisIrregular2Linear = True
+res@trYReverse=True               ;倒转Y轴
 ```
 ```
- ;cnres@tmYLMode              = "Explicit"
- ;cnres@tmYLValues            = (/0,1000,2000,3000,4000,5000/)
- ;cnres@tmYLLabels            = "" + cnres@tmYLValues
+res@tmYLMode              = "Explicit"
+res@tmYLValues            = (/0,1000,2000,3000,4000,5000/)
+res@tmYLLabels            = "" + cnres@tmYLValues
 ```
